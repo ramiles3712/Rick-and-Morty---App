@@ -1,11 +1,11 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Characters from './Characters';
+import Characters from '../../src/pages/Characters';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import * as useCharactersHook from '../hooks/useCharacters';
+import * as useCharactersHook from '../../src/hooks/useCharacters';
 
 // Mock the hook
-vi.mock('../hooks/useCharacters');
+vi.mock('../../src/hooks/useCharacters');
 
 const mockData = {
   info: { count: 2, pages: 1, next: null, prev: null },
@@ -85,5 +85,44 @@ describe('Characters Page', () => {
     );
 
     expect(screen.getByText('Error loading characters.')).toBeInTheDocument();
+  });
+
+  it('handles search and pagination interactions', async () => {
+    // Initial load
+    useCharactersHook.default.mockReturnValue({
+      loading: false,
+      error: null,
+      data: {
+          info: { count: 20, pages: 2, next: 'url', prev: 'url' },
+          results: mockData.results
+      }
+    });
+
+    render(
+      <BrowserRouter>
+        <Characters />
+      </BrowserRouter>
+    );
+
+    // Search Interaction
+    const searchInput = screen.getByPlaceholderText('Search characters...');
+    fireEvent.change(searchInput, { target: { value: 'Morty' } });
+    
+    // Check if the search term triggers a re-render or call (mock implementation details)
+    // In a real integration, this updates state and triggers the hook. 
+    // Since we mock the hook, we can't easily see the new hook call unless we intentionally re-render with new mock return or spy on useCharacters arguments if possible.
+    // However, checking the state update effect on the hook is tricky with just mocking the return value.
+    // Standard approach: Check if the hook was called with new params.
+    expect(useCharactersHook.default).toHaveBeenCalledWith(1, { name: 'Morty' });
+
+
+    // Pagination Interactions
+    const nextButton = screen.getByText('Next');
+    fireEvent.click(nextButton);
+    expect(useCharactersHook.default).toHaveBeenCalledWith(2, { name: 'Morty' });
+
+    const prevButton = screen.getByText('Previous');
+    fireEvent.click(prevButton);
+    expect(useCharactersHook.default).toHaveBeenCalledWith(1, { name: 'Morty' });
   });
 });
