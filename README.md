@@ -42,6 +42,17 @@ yarn install
 yarn dev
 ```
 
+### 🐳 Docker
+
+You can also run the application in a Docker container.
+
+```bash
+# Build and start the container
+docker-compose up --build
+
+# The application will be available at http://localhost:3000
+```
+
 ### 🧪 Running Tests
 
 ```bash
