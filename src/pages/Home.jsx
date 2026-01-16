@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import useTitle from '../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home');
     return (
         <div className="flex flex-col items-center justify-center min-h-[80vh] text-center">
             <motion.h1
