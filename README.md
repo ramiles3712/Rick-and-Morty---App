@@ -67,6 +67,8 @@ yarn coverage
 
 ## 🏗️ Architecture & Design Pattern
 
+![Architecture Diagram](./public/diagram.png)
+
 ### Component-Based Architecture
 
 The application follows a modular **Component-Based Architecture**, ensuring reusability and separation of concerns.
